@@ -58,6 +58,9 @@ public class Sale implements Serializable {
     @JoinColumn(name = "broker_id", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Broker brokerId;
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Category categoryId;
 
     public Sale() {
     }
@@ -111,6 +114,14 @@ public class Sale implements Serializable {
 
     public void setBrokerId(Broker brokerId) {
         this.brokerId = brokerId;
+    }
+
+    public Category getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Category categoryId) {
+        this.categoryId = categoryId;
     }
 
     @Override
