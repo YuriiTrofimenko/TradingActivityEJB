@@ -7,16 +7,22 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h:dataTable value="#{index_data.allCategories}" var="category">
-            <h:column>
-                <f:facet name="header">
-                    <h:link value="all"></h:link>
-                </f:facet>
-                <h:link value="#{category.name}">
-                    <f:param name="category_id" value="#{category.id}" />
-                </h:link>
-            </h:column>
-        </h:dataTable>
+        <h:form>
+            <h:dataTable value="#{index_data.allCategories}" var="category">
+                <h:column>
+                    <f:facet name="header">
+                        <h:link value="all"></h:link>
+                    </f:facet>
+<!--                    <h:link value="#{category.name}">
+                        <f:param name="category_id" value="#{category.id}" />
+                    </h:link>-->
+                    <h:commandLink value="#{category.name}">
+                        <f:param name="category_id" value="#{category.id}" />
+                        <f:ajax event="click" onevent="showProgress" render=":salesList" listener="#{index_data.getAllSales()}"/>
+                    </h:commandLink>
+                </h:column>
+            </h:dataTable>
+        </h:form>
     </h:body>
 </html>
 

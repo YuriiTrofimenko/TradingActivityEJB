@@ -36,7 +36,9 @@ public class IndexJSFManagedBean {
     @EJB
     CategoryFacade categoryFacade;
 
-    public List getAllSales() {
+    public List getAllSales() throws InterruptedException {
+        
+        Thread.sleep(1000);
         Map<String, String> params
             = FacesContext.getCurrentInstance()
                 .getExternalContext()

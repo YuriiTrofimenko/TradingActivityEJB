@@ -8,6 +8,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet name="./css/default.css"/>
         <h:outputStylesheet name="./css/cssLayout.css"/>
+        <h:outputStylesheet name="./css/custom.css"/>
+        <h:outputScript library="js" name="custom.js"/>
         <title>#{msg.index_title}</title>
     </h:head>
 
@@ -17,6 +19,9 @@
             <ui:insert name="top">
                 <ui:include src="../chunk/header_chunk.xhtml" />
             </ui:insert>
+        </div>
+        <div id="loading_wrapper">
+            <p>Loading...</p>
         </div>
         <div id="left" class="left">
             <ui:insert name="left">

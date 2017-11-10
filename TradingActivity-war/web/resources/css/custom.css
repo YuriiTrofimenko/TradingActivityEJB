@@ -9,3 +9,19 @@ and open the template in the editor.
 */
 
 h1{color:#dddddd}
+
+#loading_wrapper{
+    width: 100%;
+    display: block;
+    text-align: center;
+    position: fixed;
+    display: none;
+}
+
+#loading_wrapper p{
+    background-color: #fde88e;
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+    font-weight: bold;
+}
