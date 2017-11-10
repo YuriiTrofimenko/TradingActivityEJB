@@ -38,7 +38,7 @@ public class IndexJSFManagedBean {
 
     public List getAllSales() throws InterruptedException {
         
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         Map<String, String> params
             = FacesContext.getCurrentInstance()
                 .getExternalContext()

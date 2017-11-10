@@ -15,10 +15,10 @@
                     </h:link>
             </h:column>
             <h:column>
-                    <f:facet name="header">security name</f:facet>
-                    <h:link value="#{sale.securityName}">
-                            <f:param name="sale_id" value="#{sale.id}" />
-                    </h:link>
+                <f:facet name="header">#{msg.security_name}</f:facet>
+                <h:link value="#{sale.securityName}">
+                    <f:param name="sale_id" value="#{sale.id}" />
+                </h:link>
             </h:column>
             <h:column>
                     <f:facet name="header">quantity</f:facet>
