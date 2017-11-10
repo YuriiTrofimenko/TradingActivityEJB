@@ -16,7 +16,7 @@ import javax.faces.context.FacesContext;
  *
  * @author student
  */
-@ManagedBean(name="locale_changer", eager = false)
+@ManagedBean(name="locale_changer", eager = true)
 @SessionScoped
 public class LocaleChangerJSFManagedBean implements Serializable {
 
@@ -26,6 +26,7 @@ public class LocaleChangerJSFManagedBean implements Serializable {
      * Creates a new instance of LocaleChangerJSFManagedBean
      */
     public LocaleChangerJSFManagedBean() {
+        
     }
         
     public void changeLocale(String localeCode) {

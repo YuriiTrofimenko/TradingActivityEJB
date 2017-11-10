@@ -8,5 +8,10 @@
             <base-name>org.tyaa.tradingactivity.nls.messages</base-name>
             <var>msg</var>
         </resource-bundle>
+        <locale-config>
+            <default-locale>ru_RU</default-locale>
+        </locale-config>
+        <supported-locale>en_US</supported-locale>
+        <supported-locale>ru_RU</supported-locale>
     </application>
 </faces-config>
