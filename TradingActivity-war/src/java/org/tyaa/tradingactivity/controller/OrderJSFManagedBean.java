@@ -13,6 +13,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import org.tyaa.tradingactivity.entity.Category;
+import org.tyaa.tradingactivity.entity.Sale;
 import org.tyaa.tradingactivity.facade.CategoryFacade;
 import org.tyaa.tradingactivity.facade.SaleFacade;
 
@@ -21,35 +22,29 @@ import org.tyaa.tradingactivity.facade.SaleFacade;
  * @author student
  */
 /*@Named(value = "indexJSFManagedBean")*/
-@ManagedBean(name = "index_data", eager = true)
+@ManagedBean(name = "order_data", eager = false)
 @ApplicationScoped
-public class IndexJSFManagedBean {
+public class OrderJSFManagedBean {
 
     /**
      * Creates a new instance of IndexJSFManagedBean
      */
-    public IndexJSFManagedBean() {
+    public OrderJSFManagedBean() {
     }
 
     @EJB
     SaleFacade saleFacade;
-    @EJB
-    CategoryFacade categoryFacade;
 
-    public List getAllSales() {
+    public Sale getSale() {
+        
+        Sale sale = null;
         Map<String, String> params
             = FacesContext.getCurrentInstance()
                 .getExternalContext()
                 .getRequestParameterMap();
-        if (params.containsKey("category_id")) {
-            Category category
-                = categoryFacade.find(Integer.valueOf(params.get("category_id")));
-            return (List) category.getSaleCollection();
+        if (params.containsKey("sale_id")) {
+            sale = saleFacade.find(Integer.valueOf(params.get("sale_id")));
         }
-        return saleFacade.findAll();
-    }
-
-    public List getAllCategories() {
-        return categoryFacade.findAll();
+        return sale;
     }
 }

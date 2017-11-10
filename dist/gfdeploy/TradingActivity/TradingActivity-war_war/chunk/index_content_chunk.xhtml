@@ -10,7 +10,9 @@
         <h:dataTable value="#{index_data.allSales}" var="sale">
             <h:column>
                     <f:facet name="header">id</f:facet>
-                    <h:outputText value="#{sale.id}"/>
+                    <h:link value="#{sale.id}" outcome="order">
+                        <f:param name="sale_id" value="#{sale.id}" />
+                    </h:link>
             </h:column>
             <h:column>
                     <f:facet name="header">security name</f:facet>

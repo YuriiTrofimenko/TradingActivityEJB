@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet name="./css/default.css"/>
         <h:outputStylesheet name="./css/cssLayout.css"/>
-        <title>#{msg.index_title}</title>
+        <title>#{msg.index_title} - Order</title>
     </h:head>
 
     <h:body>
@@ -18,14 +18,14 @@
                 <ui:include src="../chunk/header_chunk.xhtml" />
             </ui:insert>
         </div>
-        <div id="left" class="left">
+<!--        <div id="left" class="left">
             <ui:insert name="left">
                 <ui:include src="../chunk/left_menu_chunk.xhtml" />
             </ui:insert>
-        </div>
+        </div>-->
         <div id="content" class="right_content">
             <ui:insert name="content">
-                <ui:include src="../chunk/index_content_chunk.xhtml" />
+                <ui:include src="../chunk/order_content_chunk.xhtml" />
             </ui:insert>
         </div>
 
