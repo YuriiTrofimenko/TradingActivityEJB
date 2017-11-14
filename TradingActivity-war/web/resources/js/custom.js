@@ -5,3 +5,8 @@ function showProgress(data) {
         document.getElementById('loading_wrapper').style.display = "none";
     }
 }
+
+function socketListener(message, channel, event) {
+    console.log(message);
+    alert(message);
+}

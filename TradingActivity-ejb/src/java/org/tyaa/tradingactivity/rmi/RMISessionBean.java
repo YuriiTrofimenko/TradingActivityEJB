@@ -38,7 +38,7 @@ public class RMISessionBean implements RMISessionBeanRemote {
     @Resource(name="jms/TradingActivityFactory")
     private ConnectionFactory connectionFactory;
     
-    @Resource(name="jmsTradingActivityWebTopic")
+    @Resource(name="jms/TradingActivityWebTopic")
     private Destination destination;
 
 

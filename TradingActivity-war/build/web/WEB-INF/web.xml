@@ -25,4 +25,8 @@
         <exception-type>javax.faces.application.ViewExpiredException</exception-type>
         <location>/page/error.xhtml</location>
     </error-page>
+    <context-param>
+	<param-name>org.omnifaces.ENABLE_SOCKET_ENDPOINT</param-name>
+	<param-value>true</param-value>
+    </context-param>
 </web-app>
