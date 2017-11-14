@@ -13,5 +13,8 @@
         </locale-config>
         <supported-locale>en_US</supported-locale>
         <supported-locale>ru_RU</supported-locale>
+        <factory>
+            <exception-handler-factory>org.omnifaces.exceptionhandler.FullAjaxExceptionHandlerFactory</exception-handler-factory>
+        </factory>
     </application>
 </faces-config>
